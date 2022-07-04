@@ -24,7 +24,7 @@
                     OFF<span>PURP</span>
                 </h1>
                 <h3>preorder in</h3>
-                <div class="timer-flex">
+                <div class="timer-flex" id="countdown">
                     <div id="days"></div>
                     <div id="hours"></div>
                     <div id="mins"></div>
@@ -32,7 +32,7 @@
                 </div>
                 <script>
                     // Set the date we're counting down to
-                    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+                    var countDownDate = new Date("Oct 01, 2022 15:37:25").getTime();
 
                     // Update the count down every 1 second
                     var x = setInterval(function () {
@@ -49,7 +49,7 @@
                         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                        // Output the result in an element with id="demo"
+                        // Output the result in an element
                         document.getElementById("days").innerHTML = days + "<br><span>days</span>";
 
                         document.getElementById("hours").innerHTML = hours + "<br><span>hours</span>";
@@ -61,13 +61,13 @@
                         // If the count down is over, write some text 
                         if (distance < 0) {
                             clearInterval(x);
-                            document.getElementById("demo").innerHTML = "EXPIRED";
+                            document.getElementById("countdown").innerHTML = "EXPIRED";
                         }
                     }, 1000);
                 </script>
 
 
-                <img src="/playaround/nike-dunk-high-electro-purple-midnight-navy.png" alt="Nike High Dunk Sneakers"
+                <img src="assets/nike-dunk-high-electro-purple-midnight-navy.png" alt="Nike High Dunk Sneakers"
                     height="auto" width="500" class="heroimg">
                 <div class="title-price-flex">
                     <h2>
@@ -80,12 +80,11 @@
                         $129.99
                     </div>
                 </div>
+
                 <p>
-
-                <p> Dunk High 'Electro Purple Midnight Navy' is now available at The Sneakerhype!</p>
-
-                <p>Product Code: DH9751-100</p>
-
+                <p>
+                    Dunk High 'Electro Purple Midnight Navy' is now available at The Sneakerhype!
+                </p>
                 <p>
                     ✓ 100% authentic and brand new.
                 <p>
@@ -96,12 +95,15 @@
                 <p>
                     ✓ Jordans fits true to size, unsure about your size? Order ½ size up.
                 <p>
-
                 </p>
 
                 <div class="btn-flex">
-                    <a>button one</a>
-                    <a>button two</a>
+                    <a>
+                        button one
+                    </a>
+                    <a>
+                        button two
+                    </a>
                 </div>
             </div>
             <div class="hero-bar"></div>

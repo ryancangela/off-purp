@@ -11,7 +11,7 @@ section
 */
 
 body {
-  background-image: url(liquid-cheese.svg);
+  background-image: url(assets/liquid-cheese.svg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 140vh;
@@ -73,35 +73,38 @@ h2 {
   margin-top: 3vh;
 }
 
-.title-price-flex h2{
+.title-price-flex h2 {
   justify-self: flex-start;
 }
 h2 span {
-  font-size: clamp(1.25rem, 1.068rem + 0.5825vw, 2rem);
+  font-size: clamp(0.8125rem, 0.5546rem + 0.8252vw, 1.875rem);
 }
 
 .title-price-flex {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
-  
+
   max-width: 1000px;
-  
 }
 
 .price {
   font-size: clamp(2.25rem, 2.0073rem + 0.7767vw, 3.25rem);
   color: var(--purp);
   font-family: var(--ff);
-  font-weight: 400;
-  border: 2px solid var(--purp);
+  /* font-weight: 400;
+  border: 2px solid var(--purp); */
   padding: 12px 20px;
   background-color: var(--white);
   filter: var(--purpdrop);
   border-radius: 20px;
   justify-self: flex-end;
+  /*glass*/
+  backdrop-filter: blur(11.8px);
+  -webkit-backdrop-filter: blur(11.8px);
+  border: 1px solid #45356e70;
 }
-}
+
 @-webkit-keyframes text-flicker-in-glow {
   0% {
     opacity: 0;
@@ -781,4 +784,30 @@ img.heroimg {
   transition: var(--trans);
   cursor: pointer;
   animation: text-flicker-in-glow 600ms linear both;
+}
+
+.price {
+  animation-name: price-glow;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes price-glow {
+  0% {
+    filter: drop-shadow(0 0 6px #fee4ff50);
+  }
+  20% {
+    filter: drop-shadow(0 2px 4px #fee4ff70);
+  }
+  40% {
+    filter: drop-shadow(0 0 4px #fee4ff60);
+  }
+  70% {
+    filter: drop-shadow(0 4px 8px #fee4ff80);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px #fee4ff50);
+  }
 }
