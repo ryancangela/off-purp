@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&family=Rubik:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
         rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
     <!-- local -->
     <link href="styles.css" rel="stylesheet">
 </head>
@@ -19,94 +20,112 @@
     <section>
 
         <div class="card glass">
-            <div class="card-flex">
-                <h1>
-                    OFF<span>PURP</span>
-                </h1>
-                <h3>preorder in</h3>
-                <div class="timer-flex" id="countdown">
-                    <div id="days"></div>
-                    <div id="hours"></div>
-                    <div id="mins"></div>
-                    <div id="secs"></div>
-                </div>
-                <script>
-                    // Set the date we're counting down to
-                    var countDownDate = new Date("Oct 01, 2022 15:37:25").getTime();
+            <p class="card-flex">
+            <h1>
+                OFF<span>PURP</span>
+            </h1>
+            <h3>preorder in</h3>
+            <div class="timer-flex" id="countdown">
+                <div id="days"></div>
+                <div id="hours"></div>
+                <div id="mins"></div>
+                <div id="secs"></div>
+            </div>
+            <script>
+                // Set the date we're counting down to
+                var countDownDate = new Date("Oct 01, 2022 15:37:25").getTime();
 
-                    // Update the count down every 1 second
-                    var x = setInterval(function () {
+                // Update the count down every 1 second
+                var x = setInterval(function () {
 
-                        // Get today's date and time
-                        var now = new Date().getTime();
+                    // Get today's date and time
+                    var now = new Date().getTime();
 
-                        // Find the distance between now and the count down date
-                        var distance = countDownDate - now;
+                    // Find the distance between now and the count down date
+                    var distance = countDownDate - now;
 
-                        // Time calculations for days, hours, minutes and seconds
-                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                        // Output the result in an element
-                        document.getElementById("days").innerHTML = days + "<br><span>days</span>";
+                    // Output the result in an element
+                    document.getElementById("days").innerHTML = days + "<br><span>days</span>";
 
-                        document.getElementById("hours").innerHTML = hours + "<br><span>hours</span>";
+                    document.getElementById("hours").innerHTML = hours + "<br><span>hours</span>";
 
-                        document.getElementById("mins").innerHTML = minutes + "<br><span>mins</span>";
+                    document.getElementById("mins").innerHTML = minutes + "<br><span>mins</span>";
 
-                        document.getElementById("secs").innerHTML = seconds + "<br><span>secs</span>";
+                    document.getElementById("secs").innerHTML = seconds + "<br><span>secs</span>";
 
-                        // If the count down is over, write some text 
-                        if (distance < 0) {
-                            clearInterval(x);
-                            document.getElementById("countdown").innerHTML = "EXPIRED";
-                        }
-                    }, 1000);
-                </script>
+                    // If the count down is over, write some text 
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("countdown").innerHTML = "EXPIRED";
+                    }
+                }, 1000);
+            </script>
 
 
-                <img src="assets/nike-dunk-high-electro-purple-midnight-navy.png" alt="Nike High Dunk Sneakers"
-                    height="auto" width="500" class="heroimg">
-                <div class="title-price-flex">
-                    <h2>
-                        Nike Dunk High <br>
-                        <span>
-                            Electro Purple Midnight Navy
-                        </span>
-                    </h2>
-                    <div class="price">
-                        $129.99
-                    </div>
-                </div>
-
-                <p>
-                <p>
-                    Dunk High 'Electro Purple Midnight Navy' is now available at The Sneakerhype!
-                </p>
-                <p>
-                    ✓ 100% authentic and brand new.
-                <p>
-                <p>
-                    ✓ Size out of stock? Don’t worry! Fill in our contact form and we will arrange the shoe you are
-                    looking for.
-                <p>
-                <p>
-                    ✓ Jordans fits true to size, unsure about your size? Order ½ size up.
-                <p>
-                </p>
-
-                <div class="btn-flex">
-                    <a>
-                        button one
-                    </a>
-                    <a>
-                        button two
-                    </a>
+            <img src="assets/nike-dunk-high-electro-purple-midnight-navy.png" alt="Nike High Dunk Sneakers"
+                height="auto" width="500" class="heroimg">
+            <div class="title-price-flex">
+                <h2>
+                    Nike Dunk High <br>
+                    <span>
+                        Electro Purple Midnight Navy
+                    </span>
+                </h2>
+                <div class="price">
+                    $129.99
                 </div>
             </div>
-            <div class="hero-bar"></div>
+
+            <p>
+                Dunk High 'Electro Purple Midnight Navy' is now available at The Sneakerhype!
+            </p>
+            <p>
+                ✓ 100% authentic and brand new.
+            </p>
+            <p>
+                ✓ Size out of stock? Don’t worry! Fill in our contact form and we will arrange the shoe you are
+                looking for.
+            </p>
+            <p>
+                ✓ Jordans fits true to size, unsure about your size? Order ½ size up.
+            </p>
+
+            <div class="btn-flex">
+                <a href="https://www.nike.com/t/dunk-high-big-kids-shoes-s8TQL9/DH9751-100"
+                    style="text-decoration: none;">
+                    preorder
+                </a>
+                <a>
+                    learn more
+                </a>
+            </div>
+        </div>
+        <div class="hero-bar"></div>
+        <section>
+            <div id="info-area">
+                <div class="info-image">
+                    <img src="assets/front-both-whitebg.webp">
+                </div>
+                <div class="text-area">
+                    <h2>
+                        Headline 1
+                    </h2>
+                    <p>
+                        Take your day sky high in this hoops legend. The Nike Dunk returns with durability and support
+                        for
+                        every baller. With
+                        vintage vibes and sized for kids, this is an easy slam dunk for your kicks collection.
+                    </p>
+                </div>
+            </div>
+
+        </section>
     </section>
 </body>
 
